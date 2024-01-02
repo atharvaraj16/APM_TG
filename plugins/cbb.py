@@ -10,7 +10,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
     data = query.data
     if data == "about":
         await query.message.edit_text(
-            text = f"<b>○ Creator : <a href='tg://user?id={OWNER_ID}'>『 ATHARVARAJ 』</a>\n○ My Channel : @APM_MOVIES\n○ In Association with : @WebCinematics\n○ Support : @Atharvaraj_apm</b>",
+            text = f"<b>○ Creator : <a href='tg://user?id={OWNER_ID}'>『 ATHARVARAJ 』</a>\n○ My Channel : @APM_MOVIES\n○ In Association with : @APM_MOVIES_NETWORK\n○ Support : @Otaku_Adda_Group</b>",
             disable_web_page_preview = True,
             reply_markup = InlineKeyboardMarkup(
                 [
@@ -18,7 +18,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                         InlineKeyboardButton("🔒 Close", callback_data = "close")
                     ]
                 ]
-            )
+    
         )
     elif data == "close":
         await query.message.delete()
